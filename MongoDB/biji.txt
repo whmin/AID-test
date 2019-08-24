@@ -1,0 +1,38 @@
+mongodb命令
+    进入数据库 mongo
+    健值对--》文档--》集合--》数据库
+    数据库操作
+        use [db]#如果数据库存在就选择数据库，如果数据库不存在会在插入时创建
+        show dbs
+        db.dropDatabase()
+    集合操作
+        db.createCollection([db])#创建集合
+        db.[collection].insert()
+        show collections #
+        db.collection.drop()#delete
+        db.collection.renameCollection(name)#集合重命名
+    文档--相当于字典，键必须utf8字符串
+        增: insertOne()
+            insertMany()
+            insert()
+            save()
+        查:  find()
+            findOne()
+
+            distinct()
+            pretty()
+            limit()
+            skip()
+            count()
+            sort()
+        修改:updateOne()
+            updateMany()
+            findOneAndUpdate()
+            findOneAndReplace()
+        查找操作符：
+            比较：$lt $lte $gt $gte $ne $eq $in $nin
+            逻辑: $and $or $not $nor
+            数组: $all $size
+            其他: $type $exists
+        修改操作符：
+            $set $unset $rename $inc $mul $setOnInsert
